@@ -92,6 +92,14 @@ function buildCharts(sample) {
       text: otu_labels.slice(0, 10).reverse(),
       type: "bar",
       orientation: 'h',
+      marker: {
+        color: 'rgb(143,76,145)',
+        opacity: 0.6,
+        line: {
+          color: 'rgb(8,48,107)',
+          width: 1.5
+        }
+      }
     };
     var data = [trace];
 
@@ -139,17 +147,19 @@ function buildCharts(sample) {
       {
         domain: { x: [0, 1], y: [0, 1] },
         value: washingFreq,
-        title: { text: "Belly Buutton Wash Frequency" },
+        title: { text: "Belly Button Wash Frequency" },
         type: "indicator",
         mode: "gauge+number",
         delta: { reference: 10 },
         gauge: {
           axis: { range: [null, 9] },
-          bar: { color: "black" },
+          bar: { color: "rgb(0, 0, 0)" },
           steps: [
-            { range: [0, 3], color: "rgb(255, 0, 0)" },
-            { range: [3, 6], color: "rgb(255, 255, 0)" },
-            { range: [6, 9], color: "rgb(0, 255, 0)" },
+            { range: [0, 2], color: "rgb(216, 72, 132)" },
+            { range: [2, 4], color: "rgb(242, 150, 23)" },
+            { range: [4, 6], color: "rgb(255, 219, 21)" },
+            { range: [6, 8], color: "rgb(183, 205, 26)" },
+            { range: [8, 10], color: "rgb(183, 205, 26)" },
           ],
         },
       },
